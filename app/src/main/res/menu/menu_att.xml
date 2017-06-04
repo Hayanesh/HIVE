@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hayanesh.hive.Attendance">
+    <item
+        android:id="@+id/action_change"
+        android:orderInCategory="100"
+        android:title="Change"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_select"
+        android:orderInCategory="100"
+        android:title="Select All"
+        app:showAsAction="never" />
+</menu>

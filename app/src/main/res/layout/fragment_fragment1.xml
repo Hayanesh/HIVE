@@ -1,0 +1,135 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hayanesh.hive.Fragment1">
+    <android.support.v7.widget.CardView
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <View
+                android:layout_weight="1.74"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"></View>
+        <View
+            android:layout_weight="0.26"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"></View>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:paddingLeft="10dp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.3"
+                android:text="D\nE\nP\nA\nR\nT\nME\nN\nT"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+           <!-- <View
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:alpha="0.3"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray"></View>-->
+            <ListView
+                android:paddingRight="10dp"
+                android:background="@android:color/white"
+                android:divider="@android:color/transparent"
+                android:layout_weight="0.5"
+                android:id="@+id/depList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/dept"
+                android:choiceMode="singleChoice"
+                android:fadingEdge="vertical"
+                android:soundEffectsEnabled="true"
+                android:textSize="18sp"></ListView>
+        </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_alignParentBottom="true"
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+
+            android:weightSum="2">
+            <TextView
+
+                android:layout_gravity="center_vertical"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1.3"
+                android:text="S\nE\nM"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+         <!-- <View
+               android:layout_marginTop="10dp"
+               android:layout_marginBottom="10dp"
+               android:alpha="0.3"
+               android:layout_width="1dp"
+               android:layout_height="match_parent"
+               android:background="@android:color/darker_gray"></View>-->
+           <com.gregacucnik.EditableSeekBar
+               android:background="@android:color/white"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"
+               android:paddingTop="10dp"
+               android:layout_marginRight="35dp"
+               android:id="@+id/seekbar1"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               app:esbMax="8"
+               app:esbValue="1"
+               app:esbMin="1"
+               app:esbEditTextWidth="50dp"/>
+
+
+        </LinearLayout>
+        <!--<Button
+            android:layout_marginTop="-30dp"
+            android:id="@+id/next_button"
+            android:fadingEdge="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:text="Next"
+            android:alpha="0.8"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:textSize="18sp"
+            android:layout_gravity="right"
+            android:padding="15dp"
+            android:layout_below="@+id/linear2"
+            android:layout_alignParentEnd="true" />-->
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

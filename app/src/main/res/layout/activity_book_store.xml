@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.hayanesh.hive.store.Book_store">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_900"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <!--    <com.yalantis.jellytoolbar.widget.JellyToolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                app:cancelIcon="@drawable/ic_absent"
+                app:endColor="@color/colorPrimary"
+                app:icon="@drawable/ic_unchecked_circle"
+                app:startColor="@color/colorAccent"
+                app:title="Book Store"
+                app:titleTextColor="@android:color/white">
+
+                </com.yalantis.jellytoolbar.widget.JellyToolbar>-->
+        <!--  -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue_900"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <org.cryse.widget.persistentsearch.PersistentSearchView
+                android:id="@+id/searchview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:elevation="4dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                app:persistentSV_displayMode="menuItem"
+                app:persistentSV_customToolbarHeight="50dp"
+                app:persistentSV_editHintText="Search"
+                app:persistentSV_editHintTextColor="@color/grey_600"
+                app:persistentSV_editTextColor="@color/grey_600"
+                app:persistentSV_homeButtonMode="burger"
+                app:persistentSV_searchCardElevation="2dp"
+                app:persistentSV_searchTextColor="@color/grey_700"
+                app:persistentSV_homeButtonColor="@color/grey_400"
+                android:layout_marginBottom="5dp"
+                />
+            <TextView
+                android:id="@+id/book_store_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Store"
+                android:gravity="center"
+                android:typeface="serif"
+                android:textSize="21sp"
+                android:textColor="@color/white"/>
+        </android.support.v7.widget.Toolbar>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/blue_900"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:tl_indicator_color="@color/colorPrimary"
+            app:tl_indicator_margin_left="2dp"
+            app:tl_indicator_margin_right="2dp"
+            app:tl_indicator_style="BLOCK"
+            app:tl_tab_space_equal="true"
+            app:tl_textAllCaps="false"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="@color/white" />
+        <!--<com.flyco.tablayout.SegmentTabLayout
+            android:id="@+id/tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            app:tl_bar_color="#ffffff"
+            app:tl_indicator_color="#2C97DE"
+            app:tl_indicator_corner_radius="8dp"
+            app:tl_tab_padding="20dp"
+            android:layout_marginBottom="10dp"></com.flyco.tablayout.SegmentTabLayout>-->
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add" />
+
+</android.support.design.widget.CoordinatorLayout>

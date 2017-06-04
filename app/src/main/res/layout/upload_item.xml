@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.CardView
+        android:id="@+id/linear_top"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_50"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/bullet_blue"
+                    android:elevation="20dp"
+                    android:foregroundGravity="center"
+                    android:text="BROWSE"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:alpha="0.5"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="5dp"
+                    android:text="Select book from device"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/upload_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/book_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="Title"
+                    android:inputType="textCapWords|textPersonName"
+                    android:padding="15dp" />
+
+                <EditText
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="15dp"
+                    android:id="@+id/book_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:inputType="textCapWords|textPersonName"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Author"/>
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="2">
+                    <EditText
+                        android:padding="15dp"
+                        android:id="@+id/book_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginBottom="10dp"
+                        android:hint="Edition"
+                        android:layout_weight="1"/>
+                    <Button
+                        android:elevation="20dp"
+                        android:layout_marginStart="40dp"
+                        android:textColor="@color/white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Upload"
+                        android:background="@drawable/bullet_blue"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/linear_top2"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <android.support.v7.widget.CardView
+                android:layout_weight="1.2"
+                android:id="@+id/book_card"
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@android:color/darker_gray"
+                app:cardBackgroundColor="@color/cardview_dark_background"
+                app:cardElevation="10dp"
+                app:layout_anchorGravity="left|center_horizontal">
+                <ImageView
+                    android:alpha="0.6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/book2" />
+            </android.support.v7.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:foregroundGravity="center"
+                    android:text="Computer Networks"
+                    android:textSize="16sp"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginTop="3dp"
+                    android:foregroundGravity="center"
+                    android:paddingBottom="@dimen/songs_count_padding_bottom"
+                    android:alpha="0.6"
+                    android:text="Tanenbaum"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/linear_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/author"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_date" />
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.7"
+                        android:foregroundGravity="center_vertical"
+                        android:paddingLeft="5dp"
+                        android:text="2017"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/overflow"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_done_all"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_alignTop="@+id/linear_year"
+                    android:layout_alignParentEnd="true" />
+                <ProgressBar
+                    android:layout_below="@id/linear_year"
+                    android:layout_marginTop="20dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progress"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:max="100"
+                    android:progress="45"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/com_facebook_send_button_icon"/>
+</RelativeLayout>

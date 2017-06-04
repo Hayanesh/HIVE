@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:id="@+id/viewswitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="-8dp"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/circle"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:text="22"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab1"
+                android:layout_width="50dp"
+                app:fabSize="normal"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="-8dp"
+                android:layout_marginTop="9dp"
+                app:backgroundTint="@android:color/darker_gray"
+                android:src="@drawable/ic_done"
+                android:elevation="6dp"/>
+        </RelativeLayout>
+    <com.github.florent37.arclayout.ArcLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="fill_parent"
+        android:layout_marginRight="10dp"
+        android:layout_height="60dp"
+        app:arc_cropDirection="cropInside"
+        app:arc_position="left"
+        app:arc_height="20dp"
+        android:elevation="5dp"
+        >
+        <ImageView
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bullet" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+           <!-- android:background="@color/blue_50"-->
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="vertical">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/stud_name"
+            android:layout_marginLeft="40dp"
+            android:text="Kumar"
+            android:textSize="16sp"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="2dp"
+            android:paddingEnd="60dp"
+            android:typeface="serif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_marginLeft="40dp"
+                    android:text="ID: "
+                    android:alpha="0.8"
+                    android:textSize="16sp"
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_marginStart="-8dp"
+                    android:id="@+id/stud_id"
+                    android:layout_marginLeft="40dp"
+                    android:text="13TD0007"
+                    android:alpha="0.8"
+                    android:textSize="16sp"
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/check_present"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_bg"
+                android:button="@android:color/transparent"
+                android:hapticFeedbackEnabled="true"
+                android:soundEffectsEnabled="true"
+                android:fadingEdge="horizontal"
+                android:padding="10dp" />
+
+        </RelativeLayout>
+    </com.github.florent37.arclayout.ArcLayout>
+    </LinearLayout>
+</LinearLayout>

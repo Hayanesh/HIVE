@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hayanesh.hive">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1627082870928263"
+            android:exported="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TimeSchedule"
+            android:label="@string/title_activity_time_table"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Attendance"
+            android:label="@string/title_activity_attendence"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Attendance_display"
+            android:label="@string/title_activity_attendance_display"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".store.Book_store"
+            android:label="Book Store"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".store.Book_test">
+
+        </activity>
+        <activity
+            android:name=".store.Book_upload"
+            android:label="@string/title_activity_book_upload"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+
+        <receiver android:name=".store.Book_upload" />
+    </application>
+
+</manifest>

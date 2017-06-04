@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Attendance">
+
+    <!--  Toolbar ActionMode Menu Items  -->
+    <item
+        android:id="@+id/action_present"
+        android:icon="@drawable/ic_present"
+        android:orderInCategory="100"
+        android:title="Present"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_absent"
+        android:icon="@drawable/ic_absent"
+        android:orderInCategory="100"
+        android:title="Absent"
+        app:showAsAction="always" />
+
+</menu>
