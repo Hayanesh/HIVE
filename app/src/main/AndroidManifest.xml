@@ -30,7 +30,9 @@
         <activity
             android:name=".Attendance"
             android:label="@string/title_activity_attendence"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
         <activity
             android:name=".Attendance_display"
             android:label="@string/title_activity_attendance_display"

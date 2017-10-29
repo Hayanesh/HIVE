@@ -65,11 +65,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator;
 
+import static android.R.attr.id;
 import static android.R.attr.label;
 import static android.R.attr.onClick;
 import static android.R.attr.startYear;
@@ -346,8 +348,10 @@ public class Attendance extends AppCompatActivity{
             }
         })
         {
+
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
+
                 return super.getParams();
             }
         };
